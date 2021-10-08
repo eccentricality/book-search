@@ -15,7 +15,7 @@ const SignupForm = () => {
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
-  // Invoke `useMutation()` hook to return a Promise-based function and data about the ADD_USER mutation
+  // add user mutation
   const [addUser, { error }] = useMutation(ADD_USER);
 
   // function to watch for changes to form entry and set inputs to state

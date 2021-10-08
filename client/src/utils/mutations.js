@@ -60,7 +60,7 @@ export const SAVE_BOOK = gql`
 `;
 
 // remove from user favorites
-export const REMOVE_BOOK = gql`
+export const DROP_BOOK = gql`
   mutation removeBook($bookId: String!) {
     removeBook(bookId: $bookId) {
       _id

@@ -7,8 +7,6 @@ import { useQuery } from "@apollo/client";
 import { QUERY_ME } from "../utils/queries";
 import Auth from "../utils/auth";
 
-const { PUBLIC_URL } = process.env;
-
 const AppNavbar = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
@@ -25,7 +23,6 @@ const AppNavbar = () => {
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
           <Navbar.Brand as={Link} to="/">
-            <img src={`${PUBLIC_URL}/favicon-nobg.png`} id="site-logo"></img>
             Google Books Search
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar" />

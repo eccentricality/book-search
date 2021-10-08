@@ -21,7 +21,7 @@ const SignupForm = () => {
   // function to watch for changes to form entry and set inputs to state
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setUserFormData({ ...userFormData, [name]: value });
+    setUserFormData({ ...userFormData, [name]: value })
   };
 
   // function to handle "signup" form submission
@@ -39,7 +39,8 @@ const SignupForm = () => {
       // add a user to the database using the form inputs
       const { data } = await addUser({
         variables: { ...userFormData },
-      });
+      })
+      .then(console.log(userFormData));
 
       Auth.login(data.addUser.token);
     } catch (err) {
